@@ -1,0 +1,4 @@
+data/*
+!data/configdb/.gitkeep
+!data/db/.gitkeep
+

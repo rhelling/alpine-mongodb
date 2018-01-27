@@ -1,0 +1,13 @@
+version: '3'
+services:
+
+  mongodb:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+        - ./data/db:/data/db
+        - ./data/configdb:/data/configdb
+    restart: always
+    user: mongodb
+    ports: ["27017:27017"]
