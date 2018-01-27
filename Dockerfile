@@ -8,7 +8,7 @@ RUN apk update \
  && apk upgrade \
  && apk add tini bash mongodb --no-cache \
  \
- && mkdir -p /data/db \
+ && mkdir -p /data/db /data/configdb \
  && chown -R mongodb /data/db /data/configdb
 
 ENTRYPOINT ["/sbin/tini", "-g", "--"]
