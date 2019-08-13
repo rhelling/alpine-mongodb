@@ -2,6 +2,8 @@ version: '3'
 services:
 
   mongodb:
+    networks:
+        - dev
     build:
       context: .
       dockerfile: Dockerfile
@@ -10,3 +12,7 @@ services:
     restart: always
     user: mongodb
     ports: ["27017:27017"]
+    image: 'rhelling/alpine-mongodb'
+networks:
+    dev: 
+        driver: bridge
